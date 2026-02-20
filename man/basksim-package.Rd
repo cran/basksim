@@ -6,7 +6,7 @@
 \alias{basksim-package}
 \title{basksim: Simulation-Based Calculation of Basket Trial Operating Characteristics}
 \description{
-Calculates the operating characteristics of single-stage basket trials with different designs.
+Provides a unified syntax for the simulation-based comparison of different single-stage basket trial designs with a binary endpoint and equal sample sizes in all baskets. Methods include the designs by Baumann et al. (2025) \doi{10.1080/19466315.2024.2402275}, Schmitt and Baumann (2025) \doi{10.1080/19466315.2025.2486231}, Fujikawa et al. (2020) \doi{10.1002/bimj.201800404}, Berry et al. (2020) \doi{10.1177/1740774513497539}, and Neuenschwander et al. (2016) \doi{10.1002/pst.1730}. For the latter two designs, the functions are mostly wrappers for functions provided by the package 'bhmbasket'.
 }
 \seealso{
 Useful links:
@@ -19,9 +19,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Lukas Baumann \email{baumann@imbi.uni-heidelberg.de} (\href{https://orcid.org/0000-0001-7931-7470}{ORCID})
 
-Other contributors:
+Authors:
 \itemize{
-  \item Lukas Sauer (0000-0002-1340-9994) [contributor]
+  \item Lukas D Sauer \email{sauer@imbi.uni-heidelberg.de} (\href{https://orcid.org/0000-0002-1340-9994}{ORCID})
+  \item Sabrina Schmitt \email{sabrina.schmitt@uni-wuerzburg.de} (\href{https://orcid.org/0009-0008-2719-6513}{ORCID})
 }
 
 }

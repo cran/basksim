@@ -7,6 +7,8 @@
 
 [![R-CMD-check](https://github.com/lbau7/basksim/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/lbau7/basksim/actions/workflows/R-CMD-check.yaml)
 [![codecov](https://codecov.io/gh/lbau7/basksim/branch/master/graph/badge.svg?token=AVO4V52BTH)](https://app.codecov.io/gh/lbau7/basksim)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/basksim)](https://CRAN.R-project.org/package=basksim)
 <!-- badges: end -->
 
 ## Overview
@@ -16,7 +18,7 @@ trial designs based on simulation.
 
 ## Installation
 
-Install the development veresion with:
+Install the development version with:
 
 ``` r
 # install.packages("devtools")
@@ -47,9 +49,10 @@ Use `get_details` to estimate several important operating
 characteristics:
 
 ``` r
+set.seed(123)
 get_details(
   design = design,
-  n = 20,
+  n = c(15, 20, 25),
   p1 = c(0.2, 0.5, 0.5),
   lambda = 0.95,
   epsilon = 1.5,
@@ -58,20 +61,38 @@ get_details(
 )
 
 # $Rejection_Probabilities
-# [1] 0.3448 0.9772 0.9764
+# [1] 0.4226 0.9824 0.9874
 # 
 # $FWER
-# [1] 0.3448
+# [1] 0.4226
+# 
+# $EWP
+# [1] 0.999
 # 
 # $Mean
-# [1] 0.2781905 0.4795914 0.4789913
+# [1] 0.2992626 0.4823250 0.4836304
 # 
 # $MSE
-# [1] 0.014837404 0.008647713 0.008620234
+# [1] 0.020532553 0.007330251 0.006862607
 # 
 # $Lower_CL
-# [1] 0.1395151 0.3341910 0.3336988
+# [1] 0.1517281 0.3407342 0.3440962
 # 
 # $Upper_CL
-# [1] 0.4262371 0.6252845 0.6245943
+# [1] 0.4574680 0.6241900 0.6234426
+# 
+# $ECD
+# [1] 2.5472
+# 
+# $Rejection_Probabilities_SE
+# [1] 0.006985832 0.001859583 0.001577418
+# 
+# $FWER_SE
+# [1] 0.006985832
+# 
+# $EWP_SE
+# [1] 0.0004469899
+# 
+# $ECD_SE
+# [1] 0.007147353
 ```
